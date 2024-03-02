@@ -1,0 +1,108 @@
+body{
+    background-color: #FFFFFF;
+    margin: 0 0;
+
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+
+.login-container{
+    height: 60vh;
+    display: flex;
+    
+    flex-direction: column;
+    /* background-color: black; */
+    justify-content: center;
+    align-items: center;
+}
+
+
+button{
+    width:70%;
+    border: 0px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+button:hover{
+    background-color: greenyellow;
+}
+
+.login-form{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    background-color: rgb(234, 190, 216);
+
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(234, 190, 216);
+    border-radius: 10px;
+}
+
+label{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+}
+input:focus{
+    outline: none;
+    border: none ;
+}
+
+select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    outline: none;
+    border: none;
+}
+
+
+
+
+nav {
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+
+}
+
+nav ul li{
+    margin: 20px;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+
+}
+
+
+.login-form textarea{
+    border: none;
+    width: 400px;
+    height: 80px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.login-form textarea:focus{
+    outline: none;
+    border:none;
+}
