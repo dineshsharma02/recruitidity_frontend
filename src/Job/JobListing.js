@@ -31,17 +31,22 @@ const JobListing = () => {
     }, [])
     
   return (
-    <div>
+    <div className='list-container'>
         <h2>Job Listings</h2>
-        <ul>
+        <ul className='job-container'>
           {jobs.map(job=>(
             <li key={job.id}>
-              <h3>{job.title}</h3>
-              <p>Description: {job.description}</p>
-              <p>Skills Required: {job.skills_required}</p>
-              <p>Created at: {job.created_at}</p>
-              <p>Posted By: {job.posted_by}</p>
-              <p>Posted By: {job.posted_by_username}</p>
+              <h2>{job.title}</h2>
+              
+                <p>Description: {job.description}</p>
+                <p>Skills Required: {job.skills_required}</p>
+
+                <hr/>
+              
+              <div className='time'>
+                <p>Created at: {job.created_at}</p>
+                <p className='user'>Posted By: {job.posted_by_username}</p>
+              </div>
             </li>
           ))}
         </ul>

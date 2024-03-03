@@ -106,3 +106,59 @@ nav ul li a{
     outline: none;
     border:none;
 }
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* position: fixed; */
+    /* z-index: 1; */
+    /* background-color: #FFFFFF; */
+}
+
+nav li{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+nav li span{
+    
+   
+    margin-right: 10px;
+}
+
+
+.list-container{
+    margin: 0 200px;
+}
+
+
+
+.job-container li{
+    display: flex;
+    background-color: rgb(234, 190, 216);
+    margin: 20px;
+    padding: 20px;
+    flex-direction: column;
+    border-radius: 10px;
+    
+}
+
+.time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.job-container h2{
+    color:white;
+}
+
+.job-container .user{
+    color:white;
+}

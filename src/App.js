@@ -9,6 +9,7 @@ import Home from './Home';
 import Signup from './auth/Signup';
 import Logout from './auth/Logout';
 import JobListing from './Job/JobListing';
+import YourJobs from './Job/YourJobs';
 
 
 const App= () => {
@@ -29,6 +30,7 @@ const App= () => {
           <Route path="/signup" Component={Signup}/>
           <Route path="/jobposting" Component={JobPostingForm}/>
           <Route path="/joblisting" Component={JobListing}/>
+          <Route path="/yourjobs" Component={YourJobs}/>
         </Routes>
       </div>
       

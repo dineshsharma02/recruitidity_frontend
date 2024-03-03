@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 
 
@@ -39,6 +41,7 @@ const Login = () => {
               }
             });
             localStorage.setItem('role',response1.data.role);
+            localStorage.setItem('username',response1.data.username);
             localStorage.setItem('superuser',response1.data.is_superuser);
             navigate("/");
         }
@@ -54,6 +57,7 @@ const Login = () => {
   return (
     <div className='login-container'>
         <h2 className='login-header'>Login</h2>
+        <span><FontAwesomeIcon icon="fa-solid fa-user" /></span>
         <form className='login-form'>
             <label>
                 Username
