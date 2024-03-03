@@ -20,14 +20,14 @@ body{
 }
 
 
-button{
+.login-container button{
     width:70%;
     border: 0px;
     border-radius: 10px;
     padding: 5px;
 }
 
-button:hover{
+.login-container button:hover{
     background-color: greenyellow;
 }
 
@@ -161,4 +161,18 @@ nav li span{
 
 .job-container .user{
     color:white;
+}
+
+
+.job-box-apply{
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-box-apply button{
+    background-color: yellow;
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    margin: 2px;
 }

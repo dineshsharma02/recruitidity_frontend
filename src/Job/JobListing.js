@@ -5,11 +5,15 @@ import axios from 'axios'
 const JobListing = () => {
 
   const [jobs, setJobs] = useState([])
+  const [isCandidate, setIsCandidate] = useState(false)
 
     useEffect(() => {
       const fetchJobs = async () =>{
         try{
           const token = localStorage.getItem('token');
+          const role = localStorage.getItem('role');
+
+          setIsCandidate(!(role==="employer"));
 
           const response = await axios.get('http://localhost:8000/job/view-jobs/',{
             headers:{
@@ -29,6 +33,10 @@ const JobListing = () => {
       fetchJobs();
 
     }, [])
+
+    const handleApply = (jobId) =>{
+      console.log(`Applied to job with ID ${jobId}`);
+    }
     
   return (
     <div className='list-container'>
@@ -37,10 +45,16 @@ const JobListing = () => {
           {jobs.map(job=>(
             <li key={job.id}>
               <h2>{job.title}</h2>
-              
-                <p>Description: {job.description}</p>
-                <p>Skills Required: {job.skills_required}</p>
+                <div className='job-box-apply'>
+                  <div>
+                  <p>Description: {job.description}</p>
+                  <p>Skills Required: {job.skills_required}</p>
 
+                  </div>
+                  {isCandidate? <button onClick={()=> handleApply(job.id)}>Apply Now</button>:(<></>)}
+                </div>
+                
+                
                 <hr/>
               
               <div className='time'>
